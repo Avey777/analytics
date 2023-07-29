@@ -49,6 +49,7 @@ Plausible.DataCase.html
 Plausible.DataMigration.NumericIDs.html
 Plausible.DataMigration.Repo.html
 Plausible.DataMigration.html
+Plausible.DebugReplayInfo.html
 Plausible.Ecto.EventName.html
 Plausible.Event.WriteBuffer.html
 Plausible.Factory.html
@@ -80,6 +81,7 @@ Plausible.OpenTelemetry.Sampler.html
 Plausible.PaddleApi.Mock.html
 Plausible.PromEx.Plugins.PlausibleMetrics.html
 Plausible.PromEx.html
+Plausible.Props.html
 Plausible.Purge.html
 Plausible.Release.html
 Plausible.Repo.html
@@ -178,11 +180,14 @@ PlausibleWeb.FormHelpers.html
 PlausibleWeb.InvitationController.html
 PlausibleWeb.LastSeenPlug.html
 PlausibleWeb.LayoutView.html
+PlausibleWeb.Live.Components.ComboBox.StaticSearch.html
+PlausibleWeb.Live.Components.ComboBox.html
 PlausibleWeb.Live.Flash.html
-PlausibleWeb.Live.FunnelSettings.ComboBox.html
 PlausibleWeb.Live.FunnelSettings.Form.html
 PlausibleWeb.Live.FunnelSettings.List.html
 PlausibleWeb.Live.FunnelSettings.html
+PlausibleWeb.Live.PropsSettings.html
+PlausibleWeb.MJML.WeeklyReport.html
 PlausibleWeb.PageController.html
 PlausibleWeb.PageView.html
 PlausibleWeb.Plugs.NoRobots.html
@@ -208,9 +213,9 @@ api-reference.html
 assets/logo.png
 contributing.html
 dist/handlebars.runtime-NWIB6V2M.js
-dist/handlebars.templates-XWGFFSCD.js
-dist/html-JDI3AVDD.js
-dist/html-elixir-HHVY3JYD.css
+dist/handlebars.templates-NBND3S2D.js
+dist/html-CGDDOCMI.js
+dist/html-elixir-P5GXSCHE.css
 dist/inconsolata-latin-400-normal-RGKDDNDD.woff2
 dist/inconsolata-latin-700-normal-DTS2D7TO.woff2
 dist/inconsolata-latin-ext-400-normal-K7HVGTP7.woff2
@@ -234,8 +239,8 @@ dist/merriweather-latin-ext-300-normal-K6L27CZ5.woff2
 dist/merriweather-vietnamese-300-italic-EHHNZPUO.woff2
 dist/merriweather-vietnamese-300-normal-U376L4Z4.woff2
 dist/remixicon-NKANDIL5.woff2
-dist/search_items-8CCE4AAB.js
-dist/sidebar_items-F60CD41D.js
+dist/search_data-72DBBE94.js
+dist/sidebar_items-18EF995D.js
 index.html
 readme.html
 search.html

@@ -4,20 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.29.4">
+    <meta name="generator" content="ExDoc v0.30.3">
     <meta name="project" content="Plausible v0.0.1">
 
     <title>API Reference — Plausible v0.0.1</title>
-    <link rel="stylesheet" href="dist/html-elixir-HHVY3JYD.css" />
+    <link rel="stylesheet" href="dist/html-elixir-P5GXSCHE.css" />
 
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
-    <script src="dist/handlebars.templates-XWGFFSCD.js"></script>
-    <script src="dist/sidebar_items-F60CD41D.js"></script>
+    <script src="dist/handlebars.templates-NBND3S2D.js"></script>
+    <script src="dist/sidebar_items-18EF995D.js"></script>
 
       <script src="docs_config.js"></script>
 
-    <script async src="dist/html-JDI3AVDD.js"></script>
+    <script async src="dist/html-CGDDOCMI.js"></script>
 
 
   </head>
@@ -102,6 +102,11 @@ Plausible
 </button>
 
 
+    <a href="https://github.com/plausible/analytics" title="View Source" class="icon-action" rel="help">
+      <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+      <span class="sr-only">View Source</span>
+    </a>
+
 
   <span>API Reference <small class="app-vsn">Plausible v0.0.1</small></span>
 </h1>
@@ -109,10 +114,10 @@ Plausible
 
   <section class="details-list">
     <h2 id="modules" class="section-heading">
-  <a href="#modules" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">modules</p>
+  <a href="#modules">
+    <i class="ri-link-m" aria-hidden="true"></i>
+    Modules
   </a>
-  Modules
 </h2>
 
     <div class="summary">
@@ -476,8 +481,17 @@ priv/data_migrations/NumericIDs/sql</p></div>
 
   </div>
 
-    <div class="summary-synopsis"><p>Ecto.Repo for Clickhouse data migrations, to be started manually, 
+    <div class="summary-synopsis"><p>Ecto.Repo for Clickhouse data migrations, to be started manually,
 outside of the main application supervision tree.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.DebugReplayInfo.html" translate="no">Plausible.DebugReplayInfo</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Function execution context (with arguments) to Sentry reports.</p></div>
 
 </div>
 <div class="summary-row">
@@ -750,6 +764,15 @@ HTTP requests and queries to Oban tables are ignored, for example.</p></div>
   </div>
 
     <div class="summary-synopsis"><p>Custom PromEx plugin for instrumenting code within Plausible app.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Props.html" translate="no">Plausible.Props</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Context module for handling custom event props.</p></div>
 
 </div>
 <div class="summary-row">
@@ -1502,6 +1525,25 @@ to the Plausible frontend.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="PlausibleWeb.Live.Components.ComboBox.html" translate="no">PlausibleWeb.Live.Components.ComboBox</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Phoenix LiveComponent for a combobox UI element with search and selection
+functionality.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Live.Components.ComboBox.StaticSearch.html" translate="no">PlausibleWeb.Live.Components.ComboBox.StaticSearch</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Default suggestion engine for the <code class="inline">ComboBox</code> component.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="PlausibleWeb.Live.Flash.html" translate="no">PlausibleWeb.Live.Flash</a>
 
   </div>
@@ -1520,22 +1562,12 @@ to the Plausible frontend.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="PlausibleWeb.Live.FunnelSettings.ComboBox.html" translate="no">PlausibleWeb.Live.FunnelSettings.ComboBox</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>Phoenix LiveComponent for a combobox UI element with search and selection
-functionality.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="PlausibleWeb.Live.FunnelSettings.Form.html" translate="no">PlausibleWeb.Live.FunnelSettings.Form</a>
 
   </div>
 
     <div class="summary-synopsis"><p>Phoenix LiveComponent that renders a form used for setting up funnels.
-Makes use of dynamically placed <a href="PlausibleWeb.Live.FunnelSettings.ComboBox.html"><code class="inline">PlausibleWeb.Live.FunnelSettings.ComboBox</code></a> components
+Makes use of dynamically placed <code class="inline">PlausibleWeb.Live.FunnelSettings.ComboBox</code> components
 to allow building searchable funnel definitions out of list of goals available.</p></div>
 
 </div>
@@ -1547,6 +1579,24 @@ to allow building searchable funnel definitions out of list of goals available.<
 
     <div class="summary-synopsis"><p>Phoenix LiveComponent module that renders a list of funnels with their names
 and the number of steps they have.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Live.PropsSettings.html" translate="no">PlausibleWeb.Live.PropsSettings</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>LiveView allowing listing, allowing and disallowing custom event properties.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.MJML.WeeklyReport.html" translate="no">PlausibleWeb.MJML.WeeklyReport</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>MJML rendered for the weekly report e-mail</p></div>
 
 </div>
 <div class="summary-row">
@@ -1699,10 +1749,10 @@ configuration.</p></div>
 
   <section class="details-list">
     <h2 id="mix-tasks" class="section-heading">
-  <a href="#mix-tasks" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i>
-  <p class="sr-only">mix-tasks</p>
+  <a href="#mix-tasks">
+    <i class="ri-link-m" aria-hidden="true"></i>
+    Mix Tasks
   </a>
-  Mix Tasks
 </h2>
 
     <div class="summary">
@@ -1799,7 +1849,7 @@ Introduction
 
         <p class="built-using">
           Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.29.4) for the
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.30.3) for the
 
             <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
 
