@@ -13,7 +13,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-NBND3S2D.js"></script>
-    <script src="dist/sidebar_items-18EF995D.js"></script>
+    <script src="dist/sidebar_items-CD185F1C.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -200,18 +200,6 @@ Plausible
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#sites_limit/1" translate="no">sites_limit(user)</a>
-
-      </div>
-
-        <div class="summary-synopsis"><p>Returns the number of sites that an account is allowed to have. Accounts for
-grandfathering old accounts to unlimited websites and ignores site limit on self-hosted
-installations.</p></div>
-
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
         <a href="#subscription_cancelled/1" translate="no">subscription_cancelled(params)</a>
 
       </div>
@@ -245,14 +233,6 @@ installations.</p></div>
     <div class="summary-row">
       <div class="summary-signature">
         <a href="#trial_days_left/1" translate="no">trial_days_left(user)</a>
-
-      </div>
-
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
-        <a href="#usage/1" translate="no">usage(user)</a>
 
       </div>
 
@@ -390,7 +370,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">last_two_billing_cycles(user, today \\ Timex.today())</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L132" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L131" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -414,7 +394,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">last_two_billing_months_usage(user, today \\ Timex.today())</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L114" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L113" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -423,6 +403,13 @@ Functions
   </div>
 
   <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> last_two_billing_months_usage(<a href="Plausible.Auth.User.html#t:t/0">Plausible.Auth.User.t</a>(), <a href="https://hexdocs.pm/elixir/Date.html#t:t/0">Date.t</a>()) ::
+  {<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">non_neg_integer</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">non_neg_integer</a>()}</pre>
+
+      </div>
 
 
   </section>
@@ -458,7 +445,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">on_trial?(user)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L99" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L100" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -480,7 +467,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">paddle_api()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L327" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L284" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -491,30 +478,6 @@ Functions
   <section class="docstring">
 
 
-  </section>
-</section>
-<section class="detail" id="sites_limit/1">
-
-  <div class="detail-header">
-    <a href="#sites_limit/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">sites_limit(user)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L163" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Returns the number of sites that an account is allowed to have. Accounts for
-grandfathering old accounts to unlimited websites and ignores site limit on self-hosted
-installations.</p>
   </section>
 </section>
 <section class="detail" id="subscription_cancelled/1">
@@ -614,29 +577,7 @@ installations.</p>
     </a>
     <h1 class="signature" translate="no">trial_days_left(user)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L105" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="usage/1">
-
-  <div class="detail-header">
-    <a href="#usage/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">usage(user)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L109" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L107" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -658,7 +599,7 @@ installations.</p>
     </a>
     <h1 class="signature" translate="no">usage_breakdown(user)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L152" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L151" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
