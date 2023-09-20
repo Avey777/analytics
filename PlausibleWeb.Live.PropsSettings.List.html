@@ -7,7 +7,7 @@
     <meta name="generator" content="ExDoc v0.30.3">
     <meta name="project" content="Plausible v0.0.1">
 
-    <title>PlausibleWeb.UnsubscribeController — Plausible v0.0.1</title>
+    <title>PlausibleWeb.Live.PropsSettings.List — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/html-elixir-P5GXSCHE.css" />
 
 
@@ -102,16 +102,20 @@ Plausible
 </button>
 
 
-    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/controllers/unsubscribe_controller.ex#L1" title="View Source" class="icon-action" rel="help">
+    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/live/props_settings/list.ex#L1" title="View Source" class="icon-action" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
-  <span translate="no">PlausibleWeb.UnsubscribeController</span> 
+  <span translate="no">PlausibleWeb.Live.PropsSettings.List</span> 
   <small class="app-vsn" translate="no">(Plausible v0.0.1)</small>
 
 </h1>
 
+
+  <section id="moduledoc">
+<p>Phoenix LiveComponent module that renders a list of custom properties</p>
+  </section>
 
 
   <section id="summary" class="details-list">
@@ -128,17 +132,11 @@ Plausible
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#monthly_report/2" translate="no">monthly_report(conn, map)</a>
+        <a href="#render/1" translate="no">render(assigns)</a>
 
       </div>
 
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
-        <a href="#weekly_report/2" translate="no">weekly_report(conn, map)</a>
-
-      </div>
+        <div class="summary-synopsis"><h2>Attributes</h2><ul><li><code class="inline">props</code> (<code class="inline">:list</code>) (required)</li><li><code class="inline">domain</code> (<code class="inline">:string</code>) (required)</li><li><code class="inline">filter_text</code> (<code class="inline">:string</code>)</li></ul></div>
 
     </div>
 
@@ -155,16 +153,16 @@ Functions
       </a>
     </h1>
     <div class="functions-list">
-<section class="detail" id="monthly_report/2">
+<section class="detail" id="render/1">
 
   <div class="detail-header">
-    <a href="#monthly_report/2" class="detail-link" title="Link to this function">
+    <a href="#render/1" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">monthly_report(conn, map)</h1>
+    <h1 class="signature" translate="no">render(assigns)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/controllers/unsubscribe_controller.ex#L25" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/live/props_settings/list.ex#L1" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -174,29 +172,13 @@ Functions
 
   <section class="docstring">
 
-
-  </section>
-</section>
-<section class="detail" id="weekly_report/2">
-
-  <div class="detail-header">
-    <a href="#weekly_report/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">weekly_report(conn, map)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/controllers/unsubscribe_controller.ex#L6" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
+<h2 id="render/1-attributes" class="section-heading">
+  <a href="#render/1-attributes">
+    <i class="ri-link-m" aria-hidden="true"></i>
+    Attributes
+  </a>
+</h2>
+<ul><li><code class="inline">props</code> (<code class="inline">:list</code>) (required)</li><li><code class="inline">domain</code> (<code class="inline">:string</code>) (required)</li><li><code class="inline">filter_text</code> (<code class="inline">:string</code>)</li></ul>
   </section>
 </section>
 
