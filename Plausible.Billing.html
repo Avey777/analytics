@@ -13,7 +13,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-NBND3S2D.js"></script>
-    <script src="dist/sidebar_items-1B0C8384.js"></script>
+    <script src="dist/sidebar_items-D658F878.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -176,22 +176,6 @@ Plausible
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#last_two_billing_cycles/2" translate="no">last_two_billing_cycles(user, today \\ Timex.today())</a>
-
-      </div>
-
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
-        <a href="#last_two_billing_months_usage/2" translate="no">last_two_billing_months_usage(user, today \\ Timex.today())</a>
-
-      </div>
-
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
         <a href="#on_trial?/1" translate="no">on_trial?(user)</a>
 
       </div>
@@ -217,6 +201,14 @@ Plausible
     <div class="summary-row">
       <div class="summary-signature">
         <a href="#subscription_created/1" translate="no">subscription_created(params)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#subscription_is_active?/1" translate="no">subscription_is_active?(subscription)</a>
 
       </div>
 
@@ -254,14 +246,6 @@ Plausible
 
     </div>
 
-    <div class="summary-row">
-      <div class="summary-signature">
-        <a href="#usage_breakdown/1" translate="no">usage_breakdown(user)</a>
-
-      </div>
-
-    </div>
-
 </div>
 
   </section>
@@ -284,7 +268,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">active_subscription_for(user_id)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L12" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L13" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -312,7 +296,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">cancelled_subscription_notice_dismiss_id(user)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L284" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L254" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -334,7 +318,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">change_plan(user, new_plan_id)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L45" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L46" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -356,7 +340,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">change_plan_preview(subscription, new_plan_id)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L75" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L76" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -378,7 +362,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">check_needs_to_upgrade(user)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L91" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L92" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -408,7 +392,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">has_active_subscription?(user_id)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L17" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L18" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -421,61 +405,6 @@ Functions
       <div class="specs">
 
           <pre translate="no"><span class="attribute">@spec</span> has_active_subscription?(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>()</pre>
-
-      </div>
-
-
-  </section>
-</section>
-<section class="detail" id="last_two_billing_cycles/2">
-
-    <span id="last_two_billing_cycles/1"></span>
-
-  <div class="detail-header">
-    <a href="#last_two_billing_cycles/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">last_two_billing_cycles(user, today \\ Timex.today())</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L150" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="last_two_billing_months_usage/2">
-
-    <span id="last_two_billing_months_usage/1"></span>
-
-  <div class="detail-header">
-    <a href="#last_two_billing_months_usage/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">last_two_billing_months_usage(user, today \\ Timex.today())</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L132" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-      <div class="specs">
-
-          <pre translate="no"><span class="attribute">@spec</span> last_two_billing_months_usage(<a href="Plausible.Auth.User.html#t:t/0">Plausible.Auth.User.t</a>(), <a href="https://hexdocs.pm/elixir/Date.html#t:t/0">Date.t</a>()) ::
-  {<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">non_neg_integer</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">non_neg_integer</a>()}</pre>
 
       </div>
 
@@ -513,7 +442,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">paddle_api()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L282" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L252" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -535,7 +464,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">subscription_cancelled(params)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L33" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L34" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -557,7 +486,29 @@ Functions
     </a>
     <h1 class="signature" translate="no">subscription_created(params)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L21" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L22" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="subscription_is_active?/1">
+
+  <div class="detail-header">
+    <a href="#subscription_is_active?/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">subscription_is_active?(subscription)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L108" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -579,7 +530,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">subscription_payment_succeeded(params)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L39" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L40" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -601,7 +552,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">subscription_updated(params)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L27" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L28" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -623,7 +574,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">trial_days_left(user)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L126" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L129" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -645,29 +596,7 @@ Functions
     </a>
     <h1 class="signature" translate="no">upgrade_route_for(user)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L6" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="usage_breakdown/1">
-
-  <div class="detail-header">
-    <a href="#usage_breakdown/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">usage_breakdown(user)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L170" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/billing/billing.ex#L7" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>

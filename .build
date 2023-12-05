@@ -116,7 +116,6 @@ Plausible.Site.Cache.Warmer.All.html
 Plausible.Site.Cache.Warmer.RecentlyUpdated.html
 Plausible.Site.Cache.Warmer.html
 Plausible.Site.Cache.html
-Plausible.Site.CustomDomain.html
 Plausible.Site.Domain.html
 Plausible.Site.GateKeeper.html
 Plausible.Site.GoogleAuth.html
@@ -154,6 +153,7 @@ Plausible.Stats.Imported.html
 Plausible.Stats.Interval.html
 Plausible.Stats.Props.html
 Plausible.Stats.Query.html
+Plausible.Stats.Sampling.html
 Plausible.Stats.Timeseries.html
 Plausible.Stats.Util.html
 Plausible.Stats.html
@@ -202,6 +202,7 @@ PlausibleWeb.Components.Site.Feature.html
 PlausibleWeb.ConnCase.html
 PlausibleWeb.ControllerHelpers.html
 PlausibleWeb.Controllers.API.Revenue.html
+PlausibleWeb.Dogfood.html
 PlausibleWeb.Email.html
 PlausibleWeb.EmailView.html
 PlausibleWeb.Endpoint.html
@@ -209,6 +210,7 @@ PlausibleWeb.ErrorHelpers.html
 PlausibleWeb.ErrorReportController.html
 PlausibleWeb.ErrorView.html
 PlausibleWeb.Favicon.html
+PlausibleWeb.FirstLaunchPlug.Test.html
 PlausibleWeb.FirstLaunchPlug.html
 PlausibleWeb.FormHelpers.html
 PlausibleWeb.InvitationController.html
@@ -320,8 +322,8 @@ dist/merriweather-latin-ext-300-normal-K6L27CZ5.woff2
 dist/merriweather-vietnamese-300-italic-EHHNZPUO.woff2
 dist/merriweather-vietnamese-300-normal-U376L4Z4.woff2
 dist/remixicon-NKANDIL5.woff2
-dist/search_data-06A04AAD.js
-dist/sidebar_items-1B0C8384.js
+dist/search_data-C938D564.js
+dist/sidebar_items-D658F878.js
 index.html
 readme.html
 search.html
