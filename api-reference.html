@@ -13,7 +13,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-NBND3S2D.js"></script>
-    <script src="dist/sidebar_items-D658F878.js"></script>
+    <script src="dist/sidebar_items-1AED098E.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -922,6 +922,16 @@ HTTP requests and queries to Oban tables are ignored, for example.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Plugins.API.CustomProps.html" translate="no">Plausible.Plugins.API.CustomProps</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Plugins API context module for Custom Props.
+All high level Custom Props operations should be implemented here.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Plugins.API.Goals.html" translate="no">Plausible.Plugins.API.Goals</a>
 
   </div>
@@ -992,6 +1002,16 @@ Exposes high-level operation for token-based authentication flows.</p></div>
   </div>
 
     <div class="summary-synopsis"><p>Deletes data from a site.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.RateLimit.html" translate="no">Plausible.RateLimit</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Thin wrapper around <a href="https://www.erlang.org/doc/man/ets.html#update_counter-4"><code class="inline">:ets.update_counter/4</code></a> and a
+clean-up process to act as a rate limiter.</p></div>
 
 </div>
 <div class="summary-row">
@@ -1110,7 +1130,7 @@ with recently updated sites every 30 seconds.</p></div>
 
   </div>
 
-    <div class="summary-synopsis"><p>Thin wrapper around Hammer for gate keeping domain-specific events
+    <div class="summary-synopsis"><p>Thin wrapper around <a href="Plausible.RateLimit.html"><code class="inline">Plausible.RateLimit</code></a> for gate keeping domain-specific events
 during the ingestion phase. When the site is allowed, gate keeping
 check returns <code class="inline">:allow</code>, otherwise a <code class="inline">:deny</code> tagged tuple is returned
 with one of the following policy markers</p></div>
@@ -1572,6 +1592,13 @@ before redeploying their scripts and integrations.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="PlausibleWeb.AdminController.html" translate="no">PlausibleWeb.AdminController</a>
+
+  </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="PlausibleWeb.Api.ExternalController.html" translate="no">PlausibleWeb.Api.ExternalController</a>
 
   </div>
@@ -1733,6 +1760,15 @@ before redeploying their scripts and integrations.</p></div>
 
     <div class="summary-synopsis"><p>Phoenix Component for rendering a user-facing feature toggle
 capable of flipping booleans in <a href="Plausible.Site.html"><code class="inline">Plausible.Site</code></a> via the <code class="inline">toggle_feature</code> controller action.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Components.TwoFactor.html" translate="no">PlausibleWeb.Components.TwoFactor</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Reusable components specific to 2FA</p></div>
 
 </div>
 <div class="summary-row">
@@ -2102,6 +2138,15 @@ and the number of steps they have.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="PlausibleWeb.Plugins.API.Controllers.CustomProps.html" translate="no">PlausibleWeb.Plugins.API.Controllers.CustomProps</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Controller for the CustomProp resource under Plugins API</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="PlausibleWeb.Plugins.API.Controllers.Goals.html" translate="no">PlausibleWeb.Plugins.API.Controllers.Goals</a>
 
   </div>
@@ -2132,6 +2177,42 @@ and the number of steps they have.</p></div>
     <a href="PlausibleWeb.Plugins.API.Router.html" translate="no">PlausibleWeb.Plugins.API.Router</a>
 
   </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Plugins.API.Schemas.CustomProp.html" translate="no">PlausibleWeb.Plugins.API.Schemas.CustomProp</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>OpenAPI schema for Goal</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Plugins.API.Schemas.CustomProp.DisableRequest.html" translate="no">PlausibleWeb.Plugins.API.Schemas.CustomProp.DisableRequest</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>OpenAPI schema for Custom Property disable request</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Plugins.API.Schemas.CustomProp.EnableRequest.html" translate="no">PlausibleWeb.Plugins.API.Schemas.CustomProp.EnableRequest</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>OpenAPI schema for Custom Property creation request</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Plugins.API.Schemas.CustomProp.ListResponse.html" translate="no">PlausibleWeb.Plugins.API.Schemas.CustomProp.ListResponse</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>OpenAPI schema for SharedLink list response</p></div>
 
 </div>
 <div class="summary-row">
@@ -2195,6 +2276,15 @@ and the number of steps they have.</p></div>
   </div>
 
     <div class="summary-synopsis"><p>OpenAPI schema for Custom Event Goal object</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Plugins.API.Schemas.Goal.DeleteBulkRequest.html" translate="no">PlausibleWeb.Plugins.API.Schemas.Goal.DeleteBulkRequest</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>OpenAPI schema for bulk Goal deletion request</p></div>
 
 </div>
 <div class="summary-row">
@@ -2321,6 +2411,15 @@ and the number of steps they have.</p></div>
   </div>
 
     <div class="summary-synopsis"><p>OpenAPI specification for the Plugins API</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Plugins.API.Views.CustomProp.html" translate="no">PlausibleWeb.Plugins.API.Views.CustomProp</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>View for rendering Custom Props in the Plugins API</p></div>
 
 </div>
 <div class="summary-row">
@@ -2491,6 +2590,16 @@ Plugins API Tokens lookup.</p></div>
     <a href="PlausibleWeb.Tracker.html" translate="no">PlausibleWeb.Tracker</a>
 
   </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.TwoFactor.Session.html" translate="no">PlausibleWeb.TwoFactor.Session</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Functions for managing session data related to Two-Factor
+Authentication.</p></div>
 
 </div>
 <div class="summary-row">

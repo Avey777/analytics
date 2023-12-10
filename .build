@@ -97,6 +97,7 @@ Plausible.Mailer.html
 Plausible.OpenTelemetry.Sampler.html
 Plausible.PaddleApi.Mock.html
 Plausible.Pagination.html
+Plausible.Plugins.API.CustomProps.html
 Plausible.Plugins.API.Goals.html
 Plausible.Plugins.API.SharedLinks.html
 Plausible.Plugins.API.Token.html
@@ -105,6 +106,7 @@ Plausible.PromEx.Plugins.PlausibleMetrics.html
 Plausible.PromEx.html
 Plausible.Props.html
 Plausible.Purge.html
+Plausible.RateLimit.html
 Plausible.Release.html
 Plausible.Repo.html
 Plausible.Sentry.Client.html
@@ -177,6 +179,7 @@ Plausible.Workers.SendSiteSetupEmails.html
 Plausible.Workers.SendTrialNotifications.html
 Plausible.Workers.SpikeNotifier.html
 Plausible.html
+PlausibleWeb.AdminController.html
 PlausibleWeb.Api.ExternalController.html
 PlausibleWeb.Api.ExternalSitesController.html
 PlausibleWeb.Api.ExternalStatsController.html
@@ -199,6 +202,7 @@ PlausibleWeb.Components.Generic.html
 PlausibleWeb.Components.Google.html
 PlausibleWeb.Components.Settings.html
 PlausibleWeb.Components.Site.Feature.html
+PlausibleWeb.Components.TwoFactor.html
 PlausibleWeb.ConnCase.html
 PlausibleWeb.ControllerHelpers.html
 PlausibleWeb.Controllers.API.Revenue.html
@@ -241,16 +245,22 @@ PlausibleWeb.Live.Sites.html
 PlausibleWeb.MJML.WeeklyReport.html
 PlausibleWeb.PageController.html
 PlausibleWeb.PageView.html
+PlausibleWeb.Plugins.API.Controllers.CustomProps.html
 PlausibleWeb.Plugins.API.Controllers.Goals.html
 PlausibleWeb.Plugins.API.Controllers.SharedLinks.html
 PlausibleWeb.Plugins.API.Errors.html
 PlausibleWeb.Plugins.API.Router.html
+PlausibleWeb.Plugins.API.Schemas.CustomProp.DisableRequest.html
+PlausibleWeb.Plugins.API.Schemas.CustomProp.EnableRequest.html
+PlausibleWeb.Plugins.API.Schemas.CustomProp.ListResponse.html
+PlausibleWeb.Plugins.API.Schemas.CustomProp.html
 PlausibleWeb.Plugins.API.Schemas.Error.html
 PlausibleWeb.Plugins.API.Schemas.Goal.CreateRequest.CustomEvent.html
 PlausibleWeb.Plugins.API.Schemas.Goal.CreateRequest.Pageview.html
 PlausibleWeb.Plugins.API.Schemas.Goal.CreateRequest.Revenue.html
 PlausibleWeb.Plugins.API.Schemas.Goal.CreateRequest.html
 PlausibleWeb.Plugins.API.Schemas.Goal.CustomEvent.html
+PlausibleWeb.Plugins.API.Schemas.Goal.DeleteBulkRequest.html
 PlausibleWeb.Plugins.API.Schemas.Goal.ListResponse.html
 PlausibleWeb.Plugins.API.Schemas.Goal.Pageview.html
 PlausibleWeb.Plugins.API.Schemas.Goal.Revenue.html
@@ -266,6 +276,7 @@ PlausibleWeb.Plugins.API.Schemas.SharedLink.html
 PlausibleWeb.Plugins.API.Schemas.Unauthorized.html
 PlausibleWeb.Plugins.API.Schemas.UnprocessableEntity.html
 PlausibleWeb.Plugins.API.Spec.html
+PlausibleWeb.Plugins.API.Views.CustomProp.html
 PlausibleWeb.Plugins.API.Views.Error.html
 PlausibleWeb.Plugins.API.Views.Goal.html
 PlausibleWeb.Plugins.API.Views.Pagination.html
@@ -288,6 +299,7 @@ PlausibleWeb.SiteView.html
 PlausibleWeb.StatsController.html
 PlausibleWeb.StatsView.html
 PlausibleWeb.Tracker.html
+PlausibleWeb.TwoFactor.Session.html
 PlausibleWeb.UnsubscribeController.html
 PlausibleWeb.UnsubscribeView.html
 PlausibleWeb.html
@@ -322,8 +334,8 @@ dist/merriweather-latin-ext-300-normal-K6L27CZ5.woff2
 dist/merriweather-vietnamese-300-italic-EHHNZPUO.woff2
 dist/merriweather-vietnamese-300-normal-U376L4Z4.woff2
 dist/remixicon-NKANDIL5.woff2
-dist/search_data-C938D564.js
-dist/sidebar_items-D658F878.js
+dist/search_data-35148E70.js
+dist/sidebar_items-1AED098E.js
 index.html
 readme.html
 search.html
