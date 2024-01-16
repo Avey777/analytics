@@ -226,6 +226,7 @@ PlausibleWeb.Live.ChoosePlan.html
 PlausibleWeb.Live.Components.ComboBox.StaticSearch.html
 PlausibleWeb.Live.Components.ComboBox.html
 PlausibleWeb.Live.Components.Form.html
+PlausibleWeb.Live.Components.Modal.html
 PlausibleWeb.Live.Components.Pagination.html
 PlausibleWeb.Live.Components.Visitors.html
 PlausibleWeb.Live.Flash.html
@@ -306,14 +307,13 @@ PlausibleWeb.TwoFactor.Session.html
 PlausibleWeb.UnsubscribeController.html
 PlausibleWeb.UnsubscribeView.html
 PlausibleWeb.html
-account-locking.html
 api-reference.html
 assets/logo.png
 contributing.html
 dist/handlebars.runtime-NWIB6V2M.js
-dist/handlebars.templates-NBND3S2D.js
-dist/html-CGDDOCMI.js
-dist/html-elixir-P5GXSCHE.css
+dist/handlebars.templates-43PMFBC7.js
+dist/html-L4O5OK2K.js
+dist/html-elixir-FM2CSD74.css
 dist/inconsolata-latin-400-normal-RGKDDNDD.woff2
 dist/inconsolata-latin-700-normal-DTS2D7TO.woff2
 dist/inconsolata-latin-ext-400-normal-K7HVGTP7.woff2
@@ -337,8 +337,8 @@ dist/merriweather-latin-ext-300-normal-K6L27CZ5.woff2
 dist/merriweather-vietnamese-300-italic-EHHNZPUO.woff2
 dist/merriweather-vietnamese-300-normal-U376L4Z4.woff2
 dist/remixicon-NKANDIL5.woff2
-dist/search_data-D8E43185.js
-dist/sidebar_items-5B076C9F.js
+dist/search_data-C8AFBE56.js
+dist/sidebar_items-CF1C204F.js
 index.html
 readme.html
 search.html
