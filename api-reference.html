@@ -14,7 +14,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-43PMFBC7.js"></script>
-    <script src="dist/sidebar_items-CF1C204F.js"></script>
+    <script src="dist/sidebar_items-4CB40722.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -402,6 +402,24 @@ via the payload.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Cache.html" translate="no">Plausible.Cache</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Caching interface specific for Plausible. Usage</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Cache.Warmer.html" translate="no">Plausible.Cache.Warmer</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>A periodic cache warmer.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.ChangesetHelpers.html" translate="no">Plausible.ChangesetHelpers</a>
 
   </div>
@@ -744,17 +762,6 @@ creating and deleting funnel definitions.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="Plausible.Google.Buffer.html" translate="no">Plausible.Google.Buffer</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>This GenServer inserts records into Clickhouse <code class="inline">imported_*</code> tables. Multiple buffers are
-automatically created for each table. Records are flushed when the table buffer reaches the
-maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="Plausible.Google.HTTP.html" translate="no">Plausible.Google.HTTP</a>
 
   </div>
@@ -813,6 +820,73 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div
     <a href="Plausible.Imported.html" translate="no">Plausible.Imported</a>
 
   </div>
+
+    <div class="summary-synopsis"><p>Context for managing site statistics imports.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Imported.Buffer.html" translate="no">Plausible.Imported.Buffer</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>This GenServer inserts records into Clickhouse <code class="inline">imported_*</code> tables. Multiple buffers are
+automatically created for each table. Records are flushed when the table buffer reaches the
+maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Imported.CSVImporter.html" translate="no">Plausible.Imported.CSVImporter</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>CSV importer stub.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Imported.ImportSources.html" translate="no">Plausible.Imported.ImportSources</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Definitions of import sources.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Imported.Importer.html" translate="no">Plausible.Imported.Importer</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Behaviour that should be implemented for each import source.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Imported.NoopImporter.html" translate="no">Plausible.Imported.NoopImporter</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Stub import implementation.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Imported.SiteImport.html" translate="no">Plausible.Imported.SiteImport</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Site import schema.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Imported.UniversalAnalytics.html" translate="no">Plausible.Imported.UniversalAnalytics</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Import implementation for Universal Analytics.</p></div>
 
 </div>
 <div class="summary-row">
@@ -913,6 +987,15 @@ to detect user errors early.</p></div>
     <a href="Plausible.Mailer.html" translate="no">Plausible.Mailer</a>
 
   </div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.MigrationUtils.html" translate="no">Plausible.MigrationUtils</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Base module for to use in Clickhouse migrations</p></div>
 
 </div>
 <div class="summary-row">
@@ -1082,6 +1165,33 @@ clean-up process to act as a rate limiter.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="Plausible.Shield.IPRule.html" translate="no">Plausible.Shield.IPRule</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Schema for IP block list</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Shield.IPRuleCache.html" translate="no">Plausible.Shield.IPRuleCache</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Allows retrieving IP Rules by domain and IP</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Shields.html" translate="no">Plausible.Shields</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Contextual interface for shields.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="Plausible.Site.html" translate="no">Plausible.Site</a>
 
   </div>
@@ -1095,39 +1205,9 @@ clean-up process to act as a rate limiter.</p></div>
 
   </div>
 
-    <div class="summary-synopsis"><p>A &quot;sites by domain&quot; caching interface.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Plausible.Site.Cache.Warmer.html" translate="no">Plausible.Site.Cache.Warmer</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>A periodic cache warmer.
-Queries all Sites from Postgres, every <code class="inline">interval</code> and pre-populates the cache.
-After each run the process is hibernated, triggering garbage collection.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Plausible.Site.Cache.Warmer.All.html" translate="no">Plausible.Site.Cache.Warmer.All</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>A Cache.Warmer adapter that refreshes the Sites Cache fully.
-This module exists only to make it explicit what the warmer
-refreshes, to be used in the supervisor tree.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="Plausible.Site.Cache.Warmer.RecentlyUpdated.html" translate="no">Plausible.Site.Cache.Warmer.RecentlyUpdated</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>A Cache.Warmer adapter that only refreshes the Cache
-with recently updated sites every 30 seconds.</p></div>
+    <div class="summary-synopsis"><p>The cache allows lookups by both <code class="inline">domain</code> and <code class="inline">domain_changed_from</code>
+fields - this is to allow traffic from sites whose domains changed within a certain
+grace period (see: <code class="inline">Plausible.Site.Transfer</code>).</p></div>
 
 </div>
 <div class="summary-row">
@@ -1164,7 +1244,7 @@ with one of the following policy markers</p></div>
 
   </div>
 
-    <div class="summary-synopsis"><p>Embedded schema for Google Analytics imports</p></div>
+    <div class="summary-synopsis"><p>Embedded schema for analytics imports</p></div>
 
 </div>
 <div class="summary-row">
@@ -1361,15 +1441,6 @@ of stats needed for email reports. These stats include</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="Plausible.Stats.FilterParser.html" translate="no">Plausible.Stats.FilterParser</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>A module for parsing filters used in stat queries.</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="Plausible.Stats.FilterSuggestions.html" translate="no">Plausible.Stats.FilterSuggestions</a>
 
   </div>
@@ -1380,6 +1451,18 @@ of stats needed for email reports. These stats include</p></div>
     <a href="Plausible.Stats.Filters.html" translate="no">Plausible.Stats.Filters</a>
 
   </div>
+
+    <div class="summary-synopsis"><p>A module for parsing filters used in stat queries.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="Plausible.Stats.Filters.Utils.html" translate="no">Plausible.Stats.Filters.Utils</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Contains utility functions shared between <code class="inline">DashboardFilterParser</code>
+and <code class="inline">StatsAPIFilterParser</code>.</p></div>
 
 </div>
 <div class="summary-row">
@@ -1550,9 +1633,11 @@ before redeploying their scripts and integrations.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="Plausible.Workers.ImportGoogleAnalytics.html" translate="no">Plausible.Workers.ImportGoogleAnalytics</a>
+    <a href="Plausible.Workers.ImportAnalytics.html" translate="no">Plausible.Workers.ImportAnalytics</a>
 
   </div>
+
+    <div class="summary-synopsis"><p>Worker for running analytics import jobs.</p></div>
 
 </div>
 <div class="summary-row">
@@ -2161,6 +2246,26 @@ and the number of steps they have.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="PlausibleWeb.Live.Shields.IPRules.html" translate="no">PlausibleWeb.Live.Shields.IPRules</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>LiveView allowing IP Rules management</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="PlausibleWeb.Live.Shields.Tabs.html" translate="no">PlausibleWeb.Live.Shields.Tabs</a>
+
+  </div>
+
+    <div class="summary-synopsis"><p>Currently only a placeholder module. Once more shields
+are implemented it will display tabs with counters,
+linking to their respective live views.</p></div>
+
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="PlausibleWeb.Live.Sites.html" translate="no">PlausibleWeb.Live.Sites</a>
 
   </div>
@@ -2189,15 +2294,6 @@ and the number of steps they have.</p></div>
     <a href="PlausibleWeb.PageView.html" translate="no">PlausibleWeb.PageView</a>
 
   </div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="PlausibleWeb.Plugins.API.html" translate="no">PlausibleWeb.Plugins.API</a>
-
-  </div>
-
-    <div class="summary-synopsis"><p>Plausible Plugins API</p></div>
 
 </div>
 <div class="summary-row">
@@ -2234,13 +2330,6 @@ and the number of steps they have.</p></div>
   </div>
 
     <div class="summary-synopsis"><p>Common responses for Plugins API</p></div>
-
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="PlausibleWeb.Plugins.API.Router.html" translate="no">PlausibleWeb.Plugins.API.Router</a>
-
-  </div>
 
 </div>
 <div class="summary-row">
@@ -2582,9 +2671,11 @@ Plugins API Tokens lookup.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="PlausibleWeb.RemoteIp.html" translate="no">PlausibleWeb.RemoteIp</a>
+    <a href="PlausibleWeb.RemoteIP.html" translate="no">PlausibleWeb.RemoteIP</a>
 
   </div>
+
+    <div class="summary-synopsis"><p>Implements the strategy of retrieving client's remote IP</p></div>
 
 </div>
 <div class="summary-row">

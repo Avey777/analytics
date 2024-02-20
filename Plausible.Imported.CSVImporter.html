@@ -8,13 +8,13 @@
     <meta name="project" content="Plausible v0.0.1">
 
 
-    <title>Plausible.Site.Cache.Warmer.All — Plausible v0.0.1</title>
+    <title>Plausible.Imported.CSVImporter — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/html-elixir-FM2CSD74.css" />
 
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-43PMFBC7.js"></script>
-    <script src="dist/sidebar_items-CF1C204F.js"></script>
+    <script src="dist/sidebar_items-4CB40722.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -131,21 +131,19 @@ Pages
 
 <h1>
 
-    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/cache/warmer/all.ex#L1" title="View Source" class="icon-action" rel="help">
+    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/csv_importer.ex#L1" title="View Source" class="icon-action" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
-  <span translate="no">Plausible.Site.Cache.Warmer.All</span> 
+  <span translate="no">Plausible.Imported.CSVImporter</span> 
   <small class="app-vsn" translate="no">(Plausible v0.0.1)</small>
 
 </h1>
 
 
   <section id="moduledoc">
-<p>A Cache.Warmer adapter that refreshes the Sites Cache fully.
-This module exists only to make it explicit what the warmer
-refreshes, to be used in the supervisor tree.</p>
+<p>CSV importer stub.</p>
   </section>
 
 
@@ -163,11 +161,9 @@ refreshes, to be used in the supervisor tree.</p>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#child_spec/1" translate="no">child_spec(opts)</a>
+        <a href="#new_import/3" translate="no">new_import(site, user, opts)</a>
 
       </div>
-
-        <div class="summary-synopsis"><p>See <a href="Plausible.Site.Cache.Warmer.html#child_spec/1"><code class="inline">Plausible.Site.Cache.Warmer.child_spec/1</code></a>.</p></div>
 
     </div>
 
@@ -184,16 +180,16 @@ refreshes, to be used in the supervisor tree.</p>
       <span class="text">Functions</span>
     </h1>
     <div class="functions-list">
-<section class="detail" id="child_spec/1">
+<section class="detail" id="new_import/3">
 
   <div class="detail-header">
-    <a href="#child_spec/1" class="detail-link" title="Link to this function">
+    <a href="#new_import/3" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">child_spec(opts)</h1>
+    <h1 class="signature" translate="no">new_import(site, user, opts)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/site/cache/warmer/all.ex#L7" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/csv_importer.ex#L6" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -203,7 +199,14 @@ refreshes, to be used in the supervisor tree.</p>
 
   <section class="docstring">
 
-<p>See <a href="Plausible.Site.Cache.Warmer.html#child_spec/1"><code class="inline">Plausible.Site.Cache.Warmer.child_spec/1</code></a>.</p>
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> new_import(<a href="Plausible.Site.html#t:t/0">Plausible.Site.t</a>(), <a href="Plausible.Auth.User.html#t:t/0">Plausible.Auth.User.t</a>(), <a href="https://hexdocs.pm/elixir/Keyword.html#t:t/0">Keyword.t</a>()) ::
+  {:ok, <a href="https://hexdocs.pm/oban/2.17.2/Oban.Job.html#t:t/0">Oban.Job.t</a>()} | {:error, <a href="https://hexdocs.pm/ecto/3.11.1/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
+
+      </div>
+
+
   </section>
 </section>
 

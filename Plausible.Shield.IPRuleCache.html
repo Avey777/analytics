@@ -8,13 +8,13 @@
     <meta name="project" content="Plausible v0.0.1">
 
 
-    <title>Plausible.Google.Buffer — Plausible v0.0.1</title>
+    <title>Plausible.Shield.IPRuleCache — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/html-elixir-FM2CSD74.css" />
 
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-43PMFBC7.js"></script>
-    <script src="dist/sidebar_items-CF1C204F.js"></script>
+    <script src="dist/sidebar_items-4CB40722.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -131,21 +131,19 @@ Pages
 
 <h1>
 
-    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/buffer.ex#L1" title="View Source" class="icon-action" rel="help">
+    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/shield/ip_rule_cache.ex#L1" title="View Source" class="icon-action" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
-  <span translate="no">Plausible.Google.Buffer</span> 
+  <span translate="no">Plausible.Shield.IPRuleCache</span> 
   <small class="app-vsn" translate="no">(Plausible v0.0.1)</small>
 
 </h1>
 
 
   <section id="moduledoc">
-<p>This GenServer inserts records into Clickhouse <code class="inline">imported_*</code> tables. Multiple buffers are
-automatically created for each table. Records are flushed when the table buffer reaches the
-maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p>
+<p>Allows retrieving IP Rules by domain and IP</p>
   </section>
 
 
@@ -163,67 +161,7 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#child_spec/1" translate="no">child_spec(init_arg)</a>
-
-      </div>
-
-        <div class="summary-synopsis"><p>Returns a specification to start this module under a supervisor.</p></div>
-
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
-        <a href="#flush/2" translate="no">flush(pid, timeout \\ :infinity)</a>
-
-      </div>
-
-        <div class="summary-synopsis"><p>Flushes all table buffers to Clickhouse.</p></div>
-
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
-        <a href="#handle_continue/2" translate="no">handle_continue(arg, state)</a>
-
-      </div>
-
-        <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/elixir/GenServer.html#c:handle_continue/2"><code class="inline">GenServer.handle_continue/2</code></a>.</p></div>
-
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
-        <a href="#init/1" translate="no">init(opts)</a>
-
-      </div>
-
-        <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/elixir/GenServer.html#c:init/1"><code class="inline">GenServer.init/1</code></a>.</p></div>
-
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
-        <a href="#insert_many/3" translate="no">insert_many(pid, table_name, records)</a>
-
-      </div>
-
-        <div class="summary-synopsis"><p>Puts the given records into the table buffer.</p></div>
-
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
-        <a href="#size/2" translate="no">size(pid, table_name)</a>
-
-      </div>
-
-        <div class="summary-synopsis"><p>Returns the total count of items in the given table buffer.</p></div>
-
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
-        <a href="#start_link/0" translate="no">start_link()</a>
+        <a href="#child_spec/1" translate="no">child_spec(opts)</a>
 
       </div>
 
@@ -231,7 +169,67 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p>
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#stop/1" translate="no">stop(pid)</a>
+        <a href="#get/2" translate="no">get(key, opts \\ [])</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#hit_rate/1" translate="no">hit_rate(cache_name \\ name())</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#merge_items/2" translate="no">merge_items(new_items, opts \\ [])</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#ready?/1" translate="no">ready?(cache_name \\ name())</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Ensures the cache has non-zero size unless no items exist.
+Useful for orchestrating app startup to prevent the service
+going up asynchronously with an empty cache.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#refresh_all/1" translate="no">refresh_all(opts \\ [])</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#refresh_updated_recently/1" translate="no">refresh_updated_recently(opts \\ [])</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#size/1" translate="no">size(cache_name \\ name())</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#telemetry_event_refresh/2" translate="no">telemetry_event_refresh(cache_name \\ name(), mode)</a>
 
       </div>
 
@@ -257,99 +255,9 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p>
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">child_spec(init_arg)</h1>
+    <h1 class="signature" translate="no">child_spec(opts)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/buffer.ex#L8" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Returns a specification to start this module under a supervisor.</p><p>See <a href="https://hexdocs.pm/elixir/Supervisor.html"><code class="inline">Supervisor</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="flush/2">
-
-    <span id="flush/1"></span>
-
-  <div class="detail-header">
-    <a href="#flush/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">flush(pid, timeout \\ :infinity)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/buffer.ex#L39" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Flushes all table buffers to Clickhouse.</p>
-  </section>
-</section>
-<section class="detail" id="handle_continue/2">
-
-  <div class="detail-header">
-    <a href="#handle_continue/2" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">handle_continue(arg, state)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/buffer.ex#L77" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Callback implementation for <a href="https://hexdocs.pm/elixir/GenServer.html#c:handle_continue/2"><code class="inline">GenServer.handle_continue/2</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="init/1">
-
-  <div class="detail-header">
-    <a href="#init/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">init(opts)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/buffer.ex#L15" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-<p>Callback implementation for <a href="https://hexdocs.pm/elixir/GenServer.html#c:init/1"><code class="inline">GenServer.init/1</code></a>.</p>
-  </section>
-</section>
-<section class="detail" id="insert_many/3">
-
-  <div class="detail-header">
-    <a href="#insert_many/3" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">insert_many(pid, table_name, records)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/buffer.ex#L23" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/shield/ip_rule_cache.ex#L8" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -361,23 +269,25 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p>
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@spec</span> insert_many(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pid</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>(), [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>()]) :: :ok</pre>
+          <pre translate="no"><span class="attribute">@spec</span> child_spec(<a href="https://hexdocs.pm/elixir/Keyword.html#t:t/0">Keyword.t</a>()) :: <a href="https://hexdocs.pm/elixir/Supervisor.html#t:child_spec/0">Supervisor.child_spec</a>()</pre>
 
       </div>
 
-<p>Puts the given records into the table buffer.</p>
+
   </section>
 </section>
-<section class="detail" id="size/2">
+<section class="detail" id="get/2">
+
+    <span id="get/1"></span>
 
   <div class="detail-header">
-    <a href="#size/2" class="detail-link" title="Link to this function">
+    <a href="#get/2" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">size(pid, table_name)</h1>
+    <h1 class="signature" translate="no">get(key, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/buffer.ex#L31" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/shield/ip_rule_cache.ex#L8" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -389,23 +299,25 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p>
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@spec</span> size(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">pid</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">term</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">non_neg_integer</a>()</pre>
+          <pre translate="no"><span class="attribute">@spec</span> get(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>(), <a href="https://hexdocs.pm/elixir/Keyword.html#t:t/0">Keyword.t</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>() | nil</pre>
 
       </div>
 
-<p>Returns the total count of items in the given table buffer.</p>
+
   </section>
 </section>
-<section class="detail" id="start_link/0">
+<section class="detail" id="hit_rate/1">
+
+    <span id="hit_rate/0"></span>
 
   <div class="detail-header">
-    <a href="#start_link/0" class="detail-link" title="Link to this function">
+    <a href="#hit_rate/1" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">start_link()</h1>
+    <h1 class="signature" translate="no">hit_rate(cache_name \\ name())</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/buffer.ex#L11" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/shield/ip_rule_cache.ex#L8" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -418,16 +330,18 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p>
 
   </section>
 </section>
-<section class="detail" id="stop/1">
+<section class="detail" id="merge_items/2">
+
+    <span id="merge_items/1"></span>
 
   <div class="detail-header">
-    <a href="#stop/1" class="detail-link" title="Link to this function">
+    <a href="#merge_items/2" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">stop(pid)</h1>
+    <h1 class="signature" translate="no">merge_items(new_items, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/google/buffer.ex#L43" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/shield/ip_rule_cache.ex#L8" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -436,6 +350,158 @@ maximum size, defined by <code class="inline">max_buffer_size/0</code>.</p>
   </div>
 
   <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> merge_items(new_items :: [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">any</a>()], opts :: <a href="https://hexdocs.pm/elixir/Keyword.html#t:t/0">Keyword.t</a>()) :: :ok</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="ready?/1">
+
+    <span id="ready?/0"></span>
+
+  <div class="detail-header">
+    <a href="#ready?/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">ready?(cache_name \\ name())</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/shield/ip_rule_cache.ex#L8" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> ready?(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>()</pre>
+
+      </div>
+
+<p>Ensures the cache has non-zero size unless no items exist.
+Useful for orchestrating app startup to prevent the service
+going up asynchronously with an empty cache.</p>
+  </section>
+</section>
+<section class="detail" id="refresh_all/1">
+
+    <span id="refresh_all/0"></span>
+
+  <div class="detail-header">
+    <a href="#refresh_all/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">refresh_all(opts \\ [])</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/shield/ip_rule_cache.ex#L8" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> refresh_all(<a href="https://hexdocs.pm/elixir/Keyword.html#t:t/0">Keyword.t</a>()) :: :ok</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="refresh_updated_recently/1">
+
+    <span id="refresh_updated_recently/0"></span>
+
+  <div class="detail-header">
+    <a href="#refresh_updated_recently/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">refresh_updated_recently(opts \\ [])</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/shield/ip_rule_cache.ex#L8" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> refresh_updated_recently(<a href="https://hexdocs.pm/elixir/Keyword.html#t:t/0">Keyword.t</a>()) :: :ok</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="size/1">
+
+    <span id="size/0"></span>
+
+  <div class="detail-header">
+    <a href="#size/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">size(cache_name \\ name())</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/shield/ip_rule_cache.ex#L8" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="telemetry_event_refresh/2">
+
+    <span id="telemetry_event_refresh/1"></span>
+
+  <div class="detail-header">
+    <a href="#telemetry_event_refresh/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">telemetry_event_refresh(cache_name \\ name(), mode)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/shield/ip_rule_cache.ex#L8" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> telemetry_event_refresh(<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()) :: [<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">atom</a>()]</pre>
+
+      </div>
 
 
   </section>

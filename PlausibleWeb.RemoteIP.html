@@ -8,13 +8,13 @@
     <meta name="project" content="Plausible v0.0.1">
 
 
-    <title>Plausible.Stats.FilterParser — Plausible v0.0.1</title>
+    <title>PlausibleWeb.RemoteIP — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/html-elixir-FM2CSD74.css" />
 
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-43PMFBC7.js"></script>
-    <script src="dist/sidebar_items-CF1C204F.js"></script>
+    <script src="dist/sidebar_items-4CB40722.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -131,19 +131,19 @@ Pages
 
 <h1>
 
-    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/filter_parser.ex#L1" title="View Source" class="icon-action" rel="help">
+    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/remote_ip.ex#L1" title="View Source" class="icon-action" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
-  <span translate="no">Plausible.Stats.FilterParser</span> 
+  <span translate="no">PlausibleWeb.RemoteIP</span> 
   <small class="app-vsn" translate="no">(Plausible v0.0.1)</small>
 
 </h1>
 
 
   <section id="moduledoc">
-<p>A module for parsing filters used in stat queries.</p>
+<p>Implements the strategy of retrieving client's remote IP</p>
   </section>
 
 
@@ -161,11 +161,9 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#parse_filters/1" translate="no">parse_filters(filters)</a>
+        <a href="#get/1" translate="no">get(conn)</a>
 
       </div>
-
-        <div class="summary-synopsis"><p>Parses different filter formats.</p></div>
 
     </div>
 
@@ -182,16 +180,16 @@ Pages
       <span class="text">Functions</span>
     </h1>
     <div class="functions-list">
-<section class="detail" id="parse_filters/1">
+<section class="detail" id="get/1">
 
   <div class="detail-header">
-    <a href="#parse_filters/1" class="detail-link" title="Link to this function">
+    <a href="#get/1" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">parse_filters(filters)</h1>
+    <h1 class="signature" translate="no">get(conn)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/filter_parser.ex#L28" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/remote_ip.ex#L6" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -201,20 +199,7 @@ Pages
 
   <section class="docstring">
 
-<p>Parses different filter formats.</p><p>Depending on the format and type of the <code class="inline">filters</code> argument, returns:</p><ul><li>a decoded map, when <code class="inline">filters</code> is encoded JSON</li><li>a parsed filter map, when <code class="inline">filters</code> is a filter expression string</li><li>the same map, when <code class="inline">filters</code> is a map</li></ul><p>Returns an empty map when argument type is unexpected (e.g. <code class="inline">nil</code>).</p><h3 id="parse_filters/1-examples" class="section-heading">
-  <a href="#parse_filters/1-examples" class="hover-link">
-    <i class="ri-link-m" aria-hidden="true"></i>
-  </a>
-  <span class="text">Examples:</span>
-</h3>
-<pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">FilterParser</span><span class="o">.</span><span class="n">parse_filters</span><span class="p" data-group-id="7905063727-1">(</span><span class="s">&quot;{</span><span class="se">\&quot;</span><span class="s">page</span><span class="se">\&quot;</span><span class="s">:</span><span class="se">\&quot;</span><span class="s">/blog/**</span><span class="se">\&quot;</span><span class="s">}&quot;</span><span class="p" data-group-id="7905063727-1">)</span><span class="w">
-</span><span class="p" data-group-id="7905063727-2">%{</span><span class="s">&quot;page&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;/blog/**&quot;</span><span class="p" data-group-id="7905063727-2">}</span><span class="w">
 
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">FilterParser</span><span class="o">.</span><span class="n">parse_filters</span><span class="p" data-group-id="7905063727-3">(</span><span class="s">&quot;visit:browser!=Chrome&quot;</span><span class="p" data-group-id="7905063727-3">)</span><span class="w">
-</span><span class="p" data-group-id="7905063727-4">%{</span><span class="s">&quot;visit:browser&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p" data-group-id="7905063727-5">{</span><span class="ss">:is_not</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Chrome&quot;</span><span class="p" data-group-id="7905063727-5">}</span><span class="p" data-group-id="7905063727-4">}</span><span class="w">
-
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">FilterParser</span><span class="o">.</span><span class="n">parse_filters</span><span class="p" data-group-id="7905063727-6">(</span><span class="no">nil</span><span class="p" data-group-id="7905063727-6">)</span><span class="w">
-</span><span class="p" data-group-id="7905063727-7">%{</span><span class="p" data-group-id="7905063727-7">}</span></code></pre>
   </section>
 </section>
 
