@@ -14,7 +14,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-43PMFBC7.js"></script>
-    <script src="dist/sidebar_items-4CB40722.js"></script>
+    <script src="dist/sidebar_items-C6CE1978.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -178,30 +178,30 @@ scope of importer logic and is expected to be implemented separately.</p><h2 id=
 </h2>
 <p>In case it's necessary to run the whole import job fully synchronously, the
 <a href="Plausible.Workers.ImportAnalytics.html"><code class="inline">Plausible.Workers.ImportAnalytics</code></a> worker sends an <a href="https://hexdocs.pm/oban/2.17.2/Oban.Notifier.html"><code class="inline">Oban.Notifier</code></a> message
-on completion, failure or transient failure of the import.</p><p>A basic usage scenario looks like this:</p><pre><code class="makeup elixir" translate="no"><span class="p" data-group-id="7481207419-1">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="n">job</span><span class="p" data-group-id="7481207419-1">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Plausible.Imported.NoopImporter</span><span class="o">.</span><span class="n">new_import</span><span class="p" data-group-id="7481207419-2">(</span><span class="w">
+on completion, failure or transient failure of the import.</p><p>A basic usage scenario looks like this:</p><pre><code class="makeup elixir" translate="no"><span class="p" data-group-id="4262817681-1">{</span><span class="ss">:ok</span><span class="p">,</span><span class="w"> </span><span class="n">job</span><span class="p" data-group-id="4262817681-1">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Plausible.Imported.NoopImporter</span><span class="o">.</span><span class="n">new_import</span><span class="p" data-group-id="4262817681-2">(</span><span class="w">
   </span><span class="n">site</span><span class="p">,</span><span class="w">
   </span><span class="n">user</span><span class="p">,</span><span class="w">
   </span><span class="ss">start_date</span><span class="p">:</span><span class="w"> </span><span class="ld">~D[2005-01-01]</span><span class="p">,</span><span class="w">
-  </span><span class="ss">end_date</span><span class="p">:</span><span class="w"> </span><span class="nc">Date</span><span class="o">.</span><span class="n">utc_today</span><span class="p" data-group-id="7481207419-3">(</span><span class="p" data-group-id="7481207419-3">)</span><span class="p">,</span><span class="w">
+  </span><span class="ss">end_date</span><span class="p">:</span><span class="w"> </span><span class="nc">Date</span><span class="o">.</span><span class="n">utc_today</span><span class="p" data-group-id="4262817681-3">(</span><span class="p" data-group-id="4262817681-3">)</span><span class="p">,</span><span class="w">
   </span><span class="c1"># this option is necessary to setup the calling process as listener</span><span class="w">
   </span><span class="ss">listen?</span><span class="p">:</span><span class="w"> </span><span class="no">true</span><span class="w">
-</span><span class="p" data-group-id="7481207419-2">)</span><span class="w">
+</span><span class="p" data-group-id="4262817681-2">)</span><span class="w">
 
-</span><span class="n">import_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">job</span><span class="o">.</span><span class="n">args</span><span class="p" data-group-id="7481207419-4">[</span><span class="ss">:import_id</span><span class="p" data-group-id="7481207419-4">]</span><span class="w">
+</span><span class="n">import_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">job</span><span class="o">.</span><span class="n">args</span><span class="p" data-group-id="4262817681-4">[</span><span class="ss">:import_id</span><span class="p" data-group-id="4262817681-4">]</span><span class="w">
 
-</span><span class="k">receive</span><span class="w"> </span><span class="k" data-group-id="7481207419-5">do</span><span class="w">
-  </span><span class="p" data-group-id="7481207419-6">{</span><span class="ss">:notification</span><span class="p">,</span><span class="w"> </span><span class="ss">:analytics_imports_jobs</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="7481207419-7">%{</span><span class="s">&quot;complete&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">^</span><span class="n">import_id</span><span class="p" data-group-id="7481207419-7">}</span><span class="p" data-group-id="7481207419-6">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
-    </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="p" data-group-id="7481207419-8">(</span><span class="s">&quot;Job completed&quot;</span><span class="p" data-group-id="7481207419-8">)</span><span class="w">
+</span><span class="k">receive</span><span class="w"> </span><span class="k" data-group-id="4262817681-5">do</span><span class="w">
+  </span><span class="p" data-group-id="4262817681-6">{</span><span class="ss">:notification</span><span class="p">,</span><span class="w"> </span><span class="ss">:analytics_imports_jobs</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="4262817681-7">%{</span><span class="s">&quot;event&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;complete&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;import_id&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">^</span><span class="n">import_id</span><span class="p" data-group-id="4262817681-7">}</span><span class="p" data-group-id="4262817681-6">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+    </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="p" data-group-id="4262817681-8">(</span><span class="s">&quot;Job completed&quot;</span><span class="p" data-group-id="4262817681-8">)</span><span class="w">
 
-  </span><span class="p" data-group-id="7481207419-9">{</span><span class="ss">:notification</span><span class="p">,</span><span class="w"> </span><span class="ss">:analytics_imports_jobs</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="7481207419-10">%{</span><span class="s">&quot;transient_fail&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">^</span><span class="n">import_id</span><span class="p" data-group-id="7481207419-10">}</span><span class="p" data-group-id="7481207419-9">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
-    </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="p" data-group-id="7481207419-11">(</span><span class="s">&quot;Job failed transiently&quot;</span><span class="p" data-group-id="7481207419-11">)</span><span class="w">
+  </span><span class="p" data-group-id="4262817681-9">{</span><span class="ss">:notification</span><span class="p">,</span><span class="w"> </span><span class="ss">:analytics_imports_jobs</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="4262817681-10">%{</span><span class="s">&quot;event&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;transient_fail&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;import_id&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">^</span><span class="n">import_id</span><span class="p" data-group-id="4262817681-10">}</span><span class="p" data-group-id="4262817681-9">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+    </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="p" data-group-id="4262817681-11">(</span><span class="s">&quot;Job failed transiently&quot;</span><span class="p" data-group-id="4262817681-11">)</span><span class="w">
 
-  </span><span class="p" data-group-id="7481207419-12">{</span><span class="ss">:notification</span><span class="p">,</span><span class="w"> </span><span class="ss">:analytics_imports_jobs</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="7481207419-13">%{</span><span class="s">&quot;fail&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">^</span><span class="n">import_id</span><span class="p" data-group-id="7481207419-13">}</span><span class="p" data-group-id="7481207419-12">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
-    </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="p" data-group-id="7481207419-14">(</span><span class="s">&quot;Job failed permanently&quot;</span><span class="p" data-group-id="7481207419-14">)</span><span class="w">
-</span><span class="k" data-group-id="7481207419-5">after</span><span class="w">
+  </span><span class="p" data-group-id="4262817681-12">{</span><span class="ss">:notification</span><span class="p">,</span><span class="w"> </span><span class="ss">:analytics_imports_jobs</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="4262817681-13">%{</span><span class="s">&quot;event&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s">&quot;fail&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;import_id&quot;</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">^</span><span class="n">import_id</span><span class="p" data-group-id="4262817681-13">}</span><span class="p" data-group-id="4262817681-12">}</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+    </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="p" data-group-id="4262817681-14">(</span><span class="s">&quot;Job failed permanently&quot;</span><span class="p" data-group-id="4262817681-14">)</span><span class="w">
+</span><span class="k" data-group-id="4262817681-5">after</span><span class="w">
   </span><span class="mi">15_000</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
-    </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="p" data-group-id="7481207419-15">(</span><span class="s">&quot;Job didn&#39;t finish in 15 seconds&quot;</span><span class="p" data-group-id="7481207419-15">)</span><span class="w">
-</span><span class="k" data-group-id="7481207419-5">end</span></code></pre><p>In a more realistic scenario, job scheduling will be done inside a GenServer process
+    </span><span class="nc">IO</span><span class="o">.</span><span class="n">puts</span><span class="p" data-group-id="4262817681-15">(</span><span class="s">&quot;Job didn&#39;t finish in 15 seconds&quot;</span><span class="p" data-group-id="4262817681-15">)</span><span class="w">
+</span><span class="k" data-group-id="4262817681-5">end</span></code></pre><p>In a more realistic scenario, job scheduling will be done inside a GenServer process
 like LiveView, where notifications can be listened for via <code class="inline">handle_info/2</code>.</p>
   </section>
 
@@ -283,6 +283,22 @@ like LiveView, where notifications can be listened for via <code class="inline">
     </div>
 
 </div>
+<div class="summary-functions summary">
+  <h2>
+    <a href="#functions">Functions</a>
+  </h2>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#listen/0" translate="no">listen()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Allows to explicitly start listening for importer job notifications.</p></div>
+
+    </div>
+
+</div>
 
   </section>
 
@@ -304,7 +320,7 @@ like LiveView, where notifications can be listened for via <code class="inline">
     </a>
     <h1 class="signature" translate="no">before_start(t)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L102" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L103" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -333,7 +349,7 @@ like LiveView, where notifications can be listened for via <code class="inline">
     </a>
     <h1 class="signature" translate="no">email_template()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L99" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L100" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -361,7 +377,7 @@ like LiveView, where notifications can be listened for via <code class="inline">
     </a>
     <h1 class="signature" translate="no">import_data(t, t)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L101" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L102" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -390,7 +406,7 @@ like LiveView, where notifications can be listened for via <code class="inline">
     </a>
     <h1 class="signature" translate="no">label()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L98" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L99" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -418,7 +434,7 @@ like LiveView, where notifications can be listened for via <code class="inline">
     </a>
     <h1 class="signature" translate="no">name()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L97" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L98" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -446,7 +462,7 @@ like LiveView, where notifications can be listened for via <code class="inline">
     </a>
     <h1 class="signature" translate="no">on_failure(t)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L104" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L105" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -474,7 +490,7 @@ like LiveView, where notifications can be listened for via <code class="inline">
     </a>
     <h1 class="signature" translate="no">on_success(t, map)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L103" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L104" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -502,7 +518,7 @@ like LiveView, where notifications can be listened for via <code class="inline">
     </a>
     <h1 class="signature" translate="no">parse_args(map)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L100" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L101" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -519,6 +535,46 @@ like LiveView, where notifications can be listened for via <code class="inline">
       </div>
 
 
+  </section>
+</section>
+
+    </div>
+  </section>
+
+  <section id="functions" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#functions">
+        <i class="ri-link-m" aria-hidden="true"></i>
+      </a>
+      <span class="text">Functions</span>
+    </h1>
+    <div class="functions-list">
+<section class="detail" id="listen/0">
+
+  <div class="detail-header">
+    <a href="#listen/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">listen()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/imported/importer.ex#L219" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> listen() :: :ok</pre>
+
+      </div>
+
+<p>Allows to explicitly start listening for importer job notifications.</p><p>Listener must explicitly filter out a subset of imports that apply to the given context.</p>
   </section>
 </section>
 
