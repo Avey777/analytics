@@ -14,7 +14,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-43PMFBC7.js"></script>
-    <script src="dist/sidebar_items-C6CE1978.js"></script>
+    <script src="dist/sidebar_items-0FD44E80.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -142,6 +142,10 @@ Pages
 </h1>
 
 
+  <section id="moduledoc">
+<p>Builds breakdown results for v1 of our stats API and dashboards.</p><p>Avoid adding new logic here - update QueryBuilder etc instead.</p>
+  </section>
+
 
   <section id="summary" class="details-list">
     <h1 class="section-heading">
@@ -157,7 +161,15 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#breakdown/6" translate="no">breakdown(site, query, property, metrics, pagination, opts \\ [])</a>
+        <a href="#breakdown/5" translate="no">breakdown(site, query, metrics, pagination, opts \\ [])</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#transform_dimensions/1" translate="no">transform_dimensions(dimension)</a>
 
       </div>
 
@@ -176,18 +188,40 @@ Pages
       <span class="text">Functions</span>
     </h1>
     <div class="functions-list">
-<section class="detail" id="breakdown/6">
+<section class="detail" id="breakdown/5">
 
-    <span id="breakdown/5"></span>
+    <span id="breakdown/4"></span>
 
   <div class="detail-header">
-    <a href="#breakdown/6" class="detail-link" title="Link to this function">
+    <a href="#breakdown/5" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">breakdown(site, query, property, metrics, pagination, opts \\ [])</h1>
+    <h1 class="signature" translate="no">breakdown(site, query, metrics, pagination, opts \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/breakdown.ex#L27" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/breakdown.ex#L17" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="transform_dimensions/1">
+
+  <div class="detail-header">
+    <a href="#transform_dimensions/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">transform_dimensions(dimension)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/stats/breakdown.ex#L186" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
