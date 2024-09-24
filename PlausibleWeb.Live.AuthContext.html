@@ -8,13 +8,13 @@
     <meta name="project" content="Plausible v0.0.1">
 
 
-    <title>PlausibleWeb.CRMAuthPlug — Plausible v0.0.1</title>
+    <title>PlausibleWeb.Live.AuthContext — Plausible v0.0.1</title>
     <link rel="stylesheet" href="dist/html-elixir-FM2CSD74.css" />
 
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-43PMFBC7.js"></script>
-    <script src="dist/sidebar_items-0FD44E80.js"></script>
+    <script src="dist/sidebar_items-DEB0EA1A.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -131,16 +131,21 @@ Pages
 
 <h1>
 
-    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/plugs/crm_auth_plug.ex#L1" title="View Source" class="icon-action" rel="help">
+    <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/live/auth_context.ex#L1" title="View Source" class="icon-action" rel="help">
       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
       <span class="sr-only">View Source</span>
     </a>
 
-  <span translate="no">PlausibleWeb.CRMAuthPlug</span> 
+  <span translate="no">PlausibleWeb.Live.AuthContext</span> 
   <small class="app-vsn" translate="no">(Plausible v0.0.1)</small>
 
 </h1>
 
+
+  <section id="moduledoc">
+<p>This module supplies LiveViews with currently logged in user data <em>if</em> session
+data contains a valid token.</p><p>Must be kept in sync with <a href="PlausibleWeb.AuthPlug.html"><code class="inline">PlausibleWeb.AuthPlug</code></a>.</p>
+  </section>
 
 
   <section id="summary" class="details-list">
@@ -157,15 +162,7 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#call/2" translate="no">call(conn, opts)</a>
-
-      </div>
-
-    </div>
-
-    <div class="summary-row">
-      <div class="summary-signature">
-        <a href="#init/1" translate="no">init(options)</a>
+        <a href="#on_mount/4" translate="no">on_mount(atom, params, session, socket)</a>
 
       </div>
 
@@ -184,38 +181,16 @@ Pages
       <span class="text">Functions</span>
     </h1>
     <div class="functions-list">
-<section class="detail" id="call/2">
+<section class="detail" id="on_mount/4">
 
   <div class="detail-header">
-    <a href="#call/2" class="detail-link" title="Link to this function">
+    <a href="#on_mount/4" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">call(conn, opts)</h1>
+    <h1 class="signature" translate="no">on_mount(atom, params, session, socket)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/plugs/crm_auth_plug.ex#L9" class="icon-action" rel="help" title="View Source">
-       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
-       <span class="sr-only">View Source</span>
-     </a>
-
-
-  </div>
-
-  <section class="docstring">
-
-
-  </section>
-</section>
-<section class="detail" id="init/1">
-
-  <div class="detail-header">
-    <a href="#init/1" class="detail-link" title="Link to this function">
-      <i class="ri-link-m" aria-hidden="true"></i>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <h1 class="signature" translate="no">init(options)</h1>
-
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/plugs/crm_auth_plug.ex#L5" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible_web/live/auth_context.ex#L19" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
