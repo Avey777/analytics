@@ -14,7 +14,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-43PMFBC7.js"></script>
-    <script src="dist/sidebar_items-36A8F48E.js"></script>
+    <script src="dist/sidebar_items-8324CD4B.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -161,7 +161,23 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#get_by_owner/1" translate="no">get_by_owner(user)</a>
+        <a href="#accept_traffic_until/1" translate="no">accept_traffic_until(team)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#end_grace_period/1" translate="no">end_grace_period(team)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#get_by_owner/1" translate="no">get_by_owner(user_id)</a>
 
       </div>
 
@@ -179,11 +195,51 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
+        <a href="#get_owner/1" translate="no">get_owner(team)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#has_active_sites?/1" translate="no">has_active_sites?(team)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#last_subscription_join_query/0" translate="no">last_subscription_join_query()</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#last_subscription_query/0" translate="no">last_subscription_query()</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
         <a href="#load_for_site/1" translate="no">load_for_site(site)</a>
 
       </div>
 
         <div class="summary-synopsis"><p>Create (when necessary) and load team relation for provided site.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#maybe_reset_next_upgrade_override/1" translate="no">maybe_reset_next_upgrade_override(team)</a>
+
+      </div>
 
     </div>
 
@@ -205,7 +261,7 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#read_team_schemas?/1" translate="no">read_team_schemas?(user)</a>
+        <a href="#owned_sites_count/1" translate="no">owned_sites_count(team)</a>
 
       </div>
 
@@ -213,7 +269,47 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#sync_team/1" translate="no">sync_team(user)</a>
+        <a href="#owned_sites_ids/1" translate="no">owned_sites_ids(team)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#owned_sites_locked?/1" translate="no">owned_sites_locked?(team)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#remove_grace_period/1" translate="no">remove_grace_period(team)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#start_grace_period/1" translate="no">start_grace_period(team)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#start_manual_lock_grace_period/1" translate="no">start_manual_lock_grace_period(team)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#start_trial/1" translate="no">start_trial(team)</a>
 
       </div>
 
@@ -222,6 +318,14 @@ Pages
     <div class="summary-row">
       <div class="summary-signature">
         <a href="#trial_days_left/1" translate="no">trial_days_left(team)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#update_accept_traffic_until/1" translate="no">update_accept_traffic_until(team)</a>
 
       </div>
 
@@ -248,6 +352,56 @@ Pages
       <span class="text">Functions</span>
     </h1>
     <div class="functions-list">
+<section class="detail" id="accept_traffic_until/1">
+
+  <div class="detail-header">
+    <a href="#accept_traffic_until/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">accept_traffic_until(team)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L215" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> accept_traffic_until(<a href="Plausible.Teams.Team.html#t:t/0">Plausible.Teams.Team.t</a>()) :: <a href="https://hexdocs.pm/elixir/Date.html#t:t/0">Date.t</a>()</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="end_grace_period/1">
+
+  <div class="detail-header">
+    <a href="#end_grace_period/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">end_grace_period(team)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L191" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
 <section class="detail" id="get_by_owner/1">
 
   <div class="detail-header">
@@ -255,9 +409,9 @@ Pages
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">get_by_owner(user)</h1>
+    <h1 class="signature" translate="no">get_by_owner(user_id)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L94" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L143" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -279,7 +433,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">get_or_create(user)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L74" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L131" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -295,6 +449,101 @@ that team is returned.</p><p>If the user has a non-guest membership other than o
 is returned.</p>
   </section>
 </section>
+<section class="detail" id="get_owner/1">
+
+  <div class="detail-header">
+    <a href="#get_owner/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">get_owner(team)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L17" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> get_owner(<a href="Plausible.Teams.Team.html#t:t/0">Plausible.Teams.Team.t</a>()) ::
+  {:ok, <a href="Plausible.Auth.User.html#t:t/0">Plausible.Auth.User.t</a>()} | {:error, :no_owner | :multiple_owners}</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="has_active_sites?/1">
+
+  <div class="detail-header">
+    <a href="#has_active_sites?/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">has_active_sites?(team)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L92" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="last_subscription_join_query/0">
+
+  <div class="detail-header">
+    <a href="#last_subscription_join_query/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">last_subscription_join_query()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L242" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="last_subscription_query/0">
+
+  <div class="detail-header">
+    <a href="#last_subscription_query/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">last_subscription_query()</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L248" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
 <section class="detail" id="load_for_site/1">
 
   <div class="detail-header">
@@ -304,7 +553,7 @@ is returned.</p>
     </a>
     <h1 class="signature" translate="no">load_for_site(site)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L46" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L103" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -317,6 +566,28 @@ is returned.</p>
 <p>Create (when necessary) and load team relation for provided site.</p><p>Used for sync logic to work smoothly during transitional period.</p>
   </section>
 </section>
+<section class="detail" id="maybe_reset_next_upgrade_override/1">
+
+  <div class="detail-header">
+    <a href="#maybe_reset_next_upgrade_override/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">maybe_reset_next_upgrade_override(team)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L203" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
 <section class="detail" id="on_trial?/1">
 
   <div class="detail-header">
@@ -326,7 +597,7 @@ is returned.</p>
     </a>
     <h1 class="signature" translate="no">on_trial?(team)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L14" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L26" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -338,7 +609,7 @@ is returned.</p>
 
       <div class="specs">
 
-          <pre translate="no"><span class="attribute">@spec</span> on_trial?(<a href="Plausible.Teams.Team.html#t:t/0">Plausible.Teams.Team.t</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>()</pre>
+          <pre translate="no"><span class="attribute">@spec</span> on_trial?(<a href="Plausible.Teams.Team.html#t:t/0">Plausible.Teams.Team.t</a>() | nil) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>()</pre>
 
       </div>
 
@@ -354,7 +625,7 @@ is returned.</p>
     </a>
     <h1 class="signature" translate="no">owned_sites(team)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L37" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L52" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -367,16 +638,16 @@ is returned.</p>
 
   </section>
 </section>
-<section class="detail" id="read_team_schemas?/1">
+<section class="detail" id="owned_sites_count/1">
 
   <div class="detail-header">
-    <a href="#read_team_schemas?/1" class="detail-link" title="Link to this function">
+    <a href="#owned_sites_count/1" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">read_team_schemas?(user)</h1>
+    <h1 class="signature" translate="no">owned_sites_count(team)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L29" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L81" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -389,16 +660,126 @@ is returned.</p>
 
   </section>
 </section>
-<section class="detail" id="sync_team/1">
+<section class="detail" id="owned_sites_ids/1">
 
   <div class="detail-header">
-    <a href="#sync_team/1" class="detail-link" title="Link to this function">
+    <a href="#owned_sites_ids/1" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">sync_team(user)</h1>
+    <h1 class="signature" translate="no">owned_sites_ids(team)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L86" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L56" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="owned_sites_locked?/1">
+
+  <div class="detail-header">
+    <a href="#owned_sites_locked?/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">owned_sites_locked?(team)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L69" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="remove_grace_period/1">
+
+  <div class="detail-header">
+    <a href="#remove_grace_period/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">remove_grace_period(team)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L197" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="start_grace_period/1">
+
+  <div class="detail-header">
+    <a href="#start_grace_period/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">start_grace_period(team)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L179" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="start_manual_lock_grace_period/1">
+
+  <div class="detail-header">
+    <a href="#start_manual_lock_grace_period/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">start_manual_lock_grace_period(team)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L185" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="start_trial/1">
+
+  <div class="detail-header">
+    <a href="#start_trial/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">start_trial(team)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L173" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -420,7 +801,7 @@ is returned.</p>
     </a>
     <h1 class="signature" translate="no">trial_days_left(team)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L25" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L40" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -439,6 +820,35 @@ is returned.</p>
 
   </section>
 </section>
+<section class="detail" id="update_accept_traffic_until/1">
+
+  <div class="detail-header">
+    <a href="#update_accept_traffic_until/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">update_accept_traffic_until(team)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L167" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> update_accept_traffic_until(<a href="Plausible.Teams.Team.html#t:t/0">Plausible.Teams.Team.t</a>()) ::
+  <a href="Plausible.Teams.Team.html#t:t/0">Plausible.Teams.Team.t</a>()</pre>
+
+      </div>
+
+
+  </section>
+</section>
 <section class="detail" id="with_subscription/1">
 
   <div class="detail-header">
@@ -448,7 +858,7 @@ is returned.</p>
     </a>
     <h1 class="signature" translate="no">with_subscription(team)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L33" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/lib/plausible/teams.ex#L48" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>

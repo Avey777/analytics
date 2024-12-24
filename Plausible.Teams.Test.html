@@ -14,7 +14,7 @@
 
     <script src="dist/handlebars.runtime-NWIB6V2M.js"></script>
     <script src="dist/handlebars.templates-43PMFBC7.js"></script>
-    <script src="dist/sidebar_items-36A8F48E.js"></script>
+    <script src="dist/sidebar_items-8324CD4B.js"></script>
 
       <script src="docs_config.js"></script>
 
@@ -185,6 +185,14 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
+        <a href="#assert_site_transfer/2" translate="no">assert_site_transfer(site, user)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
         <a href="#assert_team_attached/2" translate="no">assert_team_attached(site, team_id \\ nil)</a>
 
       </div>
@@ -217,7 +225,7 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#invite_transfer/3" translate="no">invite_transfer(site, invitee, args \\ [])</a>
+        <a href="#invite_transfer/3" translate="no">invite_transfer(site, invitee_or_email, args \\ [])</a>
 
       </div>
 
@@ -257,7 +265,7 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#subscribe_to_enterprise_plan/2" translate="no">subscribe_to_enterprise_plan(user, attrs)</a>
+        <a href="#subscribe_to_business_plan/1" translate="no">subscribe_to_business_plan(user)</a>
 
       </div>
 
@@ -265,7 +273,7 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#subscribe_to_growth_plan/1" translate="no">subscribe_to_growth_plan(user)</a>
+        <a href="#subscribe_to_enterprise_plan/2" translate="no">subscribe_to_enterprise_plan(user, attrs \\ [])</a>
 
       </div>
 
@@ -273,7 +281,31 @@ Pages
 
     <div class="summary-row">
       <div class="summary-signature">
-        <a href="#subscribe_to_plan/2" translate="no">subscribe_to_plan(user, paddle_plan_id)</a>
+        <a href="#subscribe_to_growth_plan/2" translate="no">subscribe_to_growth_plan(user, attrs \\ [])</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#subscribe_to_plan/3" translate="no">subscribe_to_plan(user, paddle_plan_id, attrs \\ [])</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#subscription_of/1" translate="no">subscription_of(user)</a>
+
+      </div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#team_of/2" translate="no">team_of(subject, opts \\ [])</a>
 
       </div>
 
@@ -303,7 +335,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">add_guest(site, args \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L58" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L95" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -325,7 +357,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">assert_guest_invitation(team, site, email, role)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L231" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L292" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -347,7 +379,29 @@ Pages
     </a>
     <h1 class="signature" translate="no">assert_guest_membership(team, site, user, role)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L246" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L318" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="assert_site_transfer/2">
+
+  <div class="detail-header">
+    <a href="#assert_site_transfer/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">assert_site_transfer(site, user)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L307" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -371,7 +425,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">assert_team_attached(site, team_id \\ nil)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L217" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L278" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -395,7 +449,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">assert_team_exists(user, team_id \\ nil)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L170" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L231" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -419,7 +473,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">assert_team_membership(user, team, role \\ :owner)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L189" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L250" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -443,7 +497,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">invite_guest(site, invitee_or_email, args \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L71" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L113" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -465,9 +519,9 @@ Pages
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">invite_transfer(site, invitee, args \\ [])</h1>
+    <h1 class="signature" translate="no">invite_transfer(site, invitee_or_email, args \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L108" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L152" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -513,7 +567,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">new_team()</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L42" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L39" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -537,7 +591,7 @@ Pages
     </a>
     <h1 class="signature" translate="no">new_user(args \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L48" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L45" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -559,7 +613,29 @@ Pages
     </a>
     <h1 class="signature" translate="no">revoke_membership(site, user)</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L124" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L174" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="subscribe_to_business_plan/1">
+
+  <div class="detail-header">
+    <a href="#subscribe_to_business_plan/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">subscribe_to_business_plan(user)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L191" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -574,14 +650,16 @@ Pages
 </section>
 <section class="detail" id="subscribe_to_enterprise_plan/2">
 
+    <span id="subscribe_to_enterprise_plan/1"></span>
+
   <div class="detail-header">
     <a href="#subscribe_to_enterprise_plan/2" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">subscribe_to_enterprise_plan(user, attrs)</h1>
+    <h1 class="signature" translate="no">subscribe_to_enterprise_plan(user, attrs \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L152" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L207" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -594,16 +672,18 @@ Pages
 
   </section>
 </section>
-<section class="detail" id="subscribe_to_growth_plan/1">
+<section class="detail" id="subscribe_to_growth_plan/2">
+
+    <span id="subscribe_to_growth_plan/1"></span>
 
   <div class="detail-header">
-    <a href="#subscribe_to_growth_plan/1" class="detail-link" title="Link to this function">
+    <a href="#subscribe_to_growth_plan/2" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">subscribe_to_growth_plan(user)</h1>
+    <h1 class="signature" translate="no">subscribe_to_growth_plan(user, attrs \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L138" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L183" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
@@ -616,16 +696,64 @@ Pages
 
   </section>
 </section>
-<section class="detail" id="subscribe_to_plan/2">
+<section class="detail" id="subscribe_to_plan/3">
+
+    <span id="subscribe_to_plan/2"></span>
 
   <div class="detail-header">
-    <a href="#subscribe_to_plan/2" class="detail-link" title="Link to this function">
+    <a href="#subscribe_to_plan/3" class="detail-link" title="Link to this function">
       <i class="ri-link-m" aria-hidden="true"></i>
       <span class="sr-only">Link to this function</span>
     </a>
-    <h1 class="signature" translate="no">subscribe_to_plan(user, paddle_plan_id)</h1>
+    <h1 class="signature" translate="no">subscribe_to_plan(user, paddle_plan_id, attrs \\ [])</h1>
 
-      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L145" class="icon-action" rel="help" title="View Source">
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L198" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="subscription_of/1">
+
+  <div class="detail-header">
+    <a href="#subscription_of/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">subscription_of(user)</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L333" class="icon-action" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+
+  </section>
+</section>
+<section class="detail" id="team_of/2">
+
+    <span id="team_of/1"></span>
+
+  <div class="detail-header">
+    <a href="#team_of/2" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">team_of(subject, opts \\ [])</h1>
+
+      <a href="https://github.com/plausible/analytics/blob/main/test/support/teams/test.ex#L71" class="icon-action" rel="help" title="View Source">
        <i class="ri-code-s-slash-line" aria-hidden="true"></i>
        <span class="sr-only">View Source</span>
      </a>
